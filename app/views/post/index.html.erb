@@ -1,0 +1,17 @@
+<img id="image" src="/p1161 (1).jpg">
+<div class="post-contain">
+    <% @post.each do |post| %>
+    <div class="index-content">
+        
+            <h3><%= link_to(post.user.name,"/post/#{post.user.id}") %></h3>
+
+        <div class="index-links">
+            <%= link_to(post.content,"/post/#{post.user_id}",{style:"color:black; text-decoration:none;"}) %>
+        </div>
+        <div class="index-time">
+            <%= post.created_at %>
+        </div>
+    </div>
+    <% end %>
+        <%= link_to("投稿画面へ","/post/new") %>
+</div>

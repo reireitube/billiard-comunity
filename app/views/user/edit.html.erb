@@ -1,0 +1,19 @@
+<img src="/pool-hall.jpg">
+<div class="profile">
+<%= form_for(:user,url:"/update",method: :put) do |f| %>
+    <p><%= f.label :name %>
+    <%= f.text_field :name,value:"#{@user.name}" %></p>
+    <p><%= f.label :email %>
+    <%= f.text_field :email %></p>
+    <p><%= f.label :password %>
+    <%= f.password_field :password %></p>
+    <p><%= f.label :level %>
+    <%= f.select :level,["A","B","C"] %></p>
+    <%= f.label "ボーラード" %>
+    <%= f.number_field :bowlard %>
+    <%= f.label "所属店舗" %>
+    <%= f.select :your_pool,@home.all.map{|home|[home.pool_hall]} %>
+    <%= f.submit "登録" %>
+<% end %>
+    <h4><%= link_to("戻る","/user/#{session[:id]}") %></h4>
+</div>

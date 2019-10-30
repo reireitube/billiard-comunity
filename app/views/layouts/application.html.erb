@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BilliardCommunity</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse bg-primary">
+      <div class="container">
+        <div class="navbar brand"> 
+          <%= link_to"Billiard player's community","/",id:"logo",class: :header_logo %>
+        </div>
+          <nav> 
+            <ul class="nav navbar-nav nabar-right">
+              <li id="home_index"><%= link_to("ビリヤードのハウストーナメント情報","/home/index") %></li>
+              <li><%= link_to("ビリヤード場を検索する","/home/search") %></li>
+              <% if !login? %>
+              <li><%= link_to("Login","/login") %></li>
+              <li><%= link_to("新規登録","/new") %></li>
+              <% else %>
+              <li><%= link_to("Logout","/destroy",data: {confirm: "いいの？"}) %></li>
+              <li><%= link_to("プロフィール","/user/#{session[:id]}")%></li>
+              <li><%= link_to("投稿する","/post/new") %></li>
+              <% end %>
+              <li><%= link_to("投稿一覧","/post/index") %></li>
+          
+
+
+            </ul>
+
+          </nav>
+      </div>
+      <%= flash[:notice] %>
+    </header>
+      <div class="container-img">
+      </div>  
+  
+    <%= yield %>
+  </body>
+</html>

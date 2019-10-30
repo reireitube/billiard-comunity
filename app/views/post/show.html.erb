@@ -1,0 +1,19 @@
+<img src="/pool-hall.jpg">
+<div class="index-contain">
+<% @post.pluck(:content).each do |post| %>
+    <div class="index-content">
+    <p><%= post %></p>
+    </div>
+<% end %>
+</div>
+<div class="profile-show">
+    <div class="profile-class"><p>class</p></div>
+    <div class="profile-level"><%= @user.level %></div>
+    <h1><%= @user.name %></h1>
+    <p><%= @user.email %></p>
+    <p><%= @user.bowlard %></p>
+    <p><%= @user.your_pool %></p>
+    <% if session[:id]== @user.id %>
+    <%= link_to("投稿画面","/post/new") %>
+    <% end %>
+</div>

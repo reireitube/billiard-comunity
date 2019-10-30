@@ -1,0 +1,19 @@
+<img src="/pool-hall.jpg">
+    <div class="index-contain">
+    <%= form_for(:homes,url:"/home/create",method: :post) do |f| %>
+        <p><%= f.label "都道府県" %>
+        <%= f.select :prefecture,["神奈川県","東京都"] %></p>
+        <p><%= f.label "店名"%>
+        <%= f.text_field :pool_hall %></p>
+        <p><%= f.label "住所"%>
+        <%= f.text_field :address %></p>
+        <p><%= f.label "日程" %>
+        <%= f.datetime_select :schedule %></p>
+        <p><%= f.label "userid" %>
+        <%= f.number_field :user_id %>
+        <p>5=神奈川県,7=東京都</p>
+        <%= f.submit "登録" %>
+        
+    <% end %>
+    <%= link_to("すべて表示","/home/all") %>
+</div>

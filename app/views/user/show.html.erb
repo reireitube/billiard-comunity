@@ -1,0 +1,14 @@
+<img src="/pool-hall.jpg">
+<div class="profile">
+    <div class="profile-class"><p>class</p></div>
+    <div class="profile-level"><%= @user.level %></div>
+    <h1><%= @user.name %></h1>
+    <ul class="user-showlist">
+    <li><%= @user.email %></li>
+    <li>ボーラードの点数:&nbsp;&nbsp;&nbsp;&nbsp;<%= @user.bowlard %></li>
+    <li>よく行くビリヤード場:&nbsp;&nbsp;&nbsp;&nbsp;<%= @user.your_pool %></li>
+    </ul>
+    <%= link_to("編集画面","/#{session[:id]}/edit") %>
+    <%= link_to("ログ","/post/#{session[:id]}") %>
+    <%= link_to("投稿画面","/post/new") %>
+</div>

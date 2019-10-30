@@ -1,0 +1,16 @@
+<img src="/pool-hall.jpg">
+    <div class="index-contain">
+        <h1 style="padding: 7px 30px 10px 30px;">~ハウストーナメント一覧~</h1>
+        <div id="Nationwide">
+        <% @home.each do |home| %>
+        <ul>
+        <li class="house"><%= link_to(home.pool_hall,"/home/#{home.id}/edit",{style:"color:black"}) %></li>
+        </ul>
+        <%= home.address %>
+        <div class="house_time"><p>開始時間</p><%= home.published_at %></div>
+    <% end %>
+        </div>
+    </div>
+<% if session[:id] == 5 %>
+<%= link_to("店舗を新規登録する","/home/new") %>
+<% end %>

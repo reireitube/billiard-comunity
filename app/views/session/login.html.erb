@@ -1,0 +1,11 @@
+<img src="/pool-hall.jpg">
+<div class="session-contain">
+    <%= form_for(:user,url:"/check",method: :post) do |f| %>
+        <div class="login"><%= f.label :email,{class:"login_flabel"} %>
+        <%= f.text_field :email %>
+        <%= f.label :password,{class:"login_flabel"} %>
+        <%= f.password_field :password %>
+        <%= f.submit "ログイン" %>
+        </div>
+    <% end %>
+</div>

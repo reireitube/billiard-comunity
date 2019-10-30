@@ -1,0 +1,253 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ 
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Henny+Penny);
+ 
+ //header
+
+   
+ .header_logo {
+	font-size: 84px;
+    font-family: 'Henny Penny', cursive;	
+    text-decoration: none;
+}
+
+//body
+body{
+    position: relative;
+}
+//foot
+.footer{
+    text-align: center;
+}
+
+//contain background img
+// .container-img{
+//     background-image: url("/pool-hall.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     height: 1000px;
+//     width: 2000px;
+//     position: relative;
+//     left: 0;
+//     z-index: -1;
+// }
+
+// Session
+.session-contain{
+    position: absolute;
+    top: 500px;
+}
+.login_flabel{
+    font-family: 'Henny Penny', cursive;	
+    background-color: silver;
+    border-radius: 0.3em;
+    padding: 3px 10px;
+    box-shadow: 0 2px 6px #c1ced7;
+    border: 1px solid rgb(216,218,223);
+}
+//profile
+.profile{
+    border: 1px solid rgb(216,218,223);
+    padding: 10px 30px;
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    height: 600px;
+    width: 1200px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+}
+.profile_content{
+    padding: 20px 20px;
+    font-size: 40px;
+}
+.profile-show{
+    border: 1px solid rgb(216,218,223);
+    padding: 10px 30px;
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    height: 600px;
+    width: 600px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+    display: inline;
+}
+.profile-level{
+    font-size: 184px;
+    font-family: 'Henny Penny', cursive;	
+    display: inline;
+    padding: 0 10px;
+}
+.profile-class{
+    font-family: 'Henny Penny', cursive;	
+    font-size: 20px;
+    display: inline;
+    float: left;
+    padding: 50px 0;
+}
+.profile p{
+    padding: 30px 0;
+    font-size: 25px;
+}
+.profile h4{
+    padding: 25px 0;
+}
+.user-showlist li{
+    padding: 10px 0;
+    font-size: 20px;
+    list-style: none;
+}
+
+//index
+.index-contain{
+    border: 1px solid rgb(216,218,223);
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    height: 70%;
+    width: 600px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+    overflow: scroll;
+    border-radius: 1em;
+}
+.index-content{
+    border: 1px solid rgb(216,218,223);
+    box-shadow: 0 2px 6px #c1ced7;
+    height: 400px;
+    font-size: 30px;
+}
+.index-links{
+    padding: 80px 0 0 20px;
+}
+.index-time{
+    padding: 20px 160px;
+    font-size: 20px;
+}
+
+//home
+.search_prefecture{
+    padding: 20px 10px;
+}
+.prefecture{
+    padding: 20px 10px;
+}
+.search_contain{
+    border: 1px solid rgb(216,218,223);
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    height: 70%;
+    width: 1500px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+    overflow: scroll;
+    border-radius: 1em;
+}
+.search_top{
+    padding: 300px 500px;
+    background-color: rgb(245, 239, 239);
+}
+.search{
+    padding: 400px 0px 20px;
+}
+.house{
+    padding: 20px 0px;
+    font-size: 25px;
+}
+.house_time{
+    padding: 30px 0px 10px 60px;
+}
+.search-detail{
+    display: none;
+    border: 1px solid rgb(216,218,223);
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    height: 70%;
+    width: 800px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+    overflow: scroll;
+    border-radius: 1em;
+}
+
+
+//top
+.top_contain{
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.top_contain h1{
+    font-size: 70px;
+    color: black;
+    padding: 0px 20px;
+}
+.top_contain p{
+    font-size: 20px;
+    padding: 5px 40px;
+}
+.session_top{
+    top: 500px;
+    left: 400px;
+    position: absolute;
+}
+.top_flabel{
+    font-family: 'Henny Penny', cursive;	
+    background-color: silver;
+    border-radius: 0.3em;
+    padding: 3px 10px;
+    box-shadow: 0 2px 6px #c1ced7;
+    border: 1px solid rgb(216,218,223);
+}
+.search_link{
+    top: 860px;
+    left: 560px;
+    font-size: 60px;
+    position: absolute;
+}
+//post
+.post-contain{
+    border: 1px solid rgb(216,218,223);
+    box-shadow: 0 2px 6px #c1ced7;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    height: 70%;
+    width: 1050px;
+    background-color: rgb(245, 239, 239);
+    opacity: 0.9;
+    overflow: scroll;
+    border-radius: 1em;
+}
+//user
+.session-contain li{
+    padding: 10px;
+    font-size: 30px;
+}
+.usernew_submit{
+    border-radius: 0.2em;
+}

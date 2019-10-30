@@ -1,0 +1,9 @@
+<img src="/pool-hall.jpg">
+<div class="index-contain">
+<ul><% @homes.each do |home| %> 
+    <li>
+        <%= home.pool_hall %>
+    </li>
+    <% end %>
+</ul>
+</div>

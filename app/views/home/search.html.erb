@@ -1,0 +1,15 @@
+<img src="/pool-hall.jpg">
+<div class="search_contain">
+    <div class="search_prefecture" style="font-size:30px">
+        <% @homes.each do |home| %>
+        <ul style="list-style:none"><li><%= link_to(home.prefecture,"/search/#{home.user_id}",{style:"color:black"}) %></li></ul>
+        <% end %>
+    </div>
+    <div class="search">
+        <%= form_for(:search, url:"/home/search_result", method: :get) do |f| %>
+            <%= f.label "ビリヤード場を検索する" %>
+            <%= f.text_field :search %>
+            <%= f.submit "検索", :name=>nil %>
+        <% end %>
+    </div>
+</div>

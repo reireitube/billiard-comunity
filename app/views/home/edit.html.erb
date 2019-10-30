@@ -1,0 +1,14 @@
+<img src="/pool-hall.jpg">
+    <div class="index-contain">
+<%= form_for(:homes,url:"/home/update/#{@home.id}",method: :patch) do |f| %>
+    <%= f.label "都道府県" %>
+    <%= f.text_field :prefecture,value:"#{@home.prefecture}" %>
+    <%= f.label "店名" %>
+    <%= f.text_field :pool_hall,value:"#{@home.pool_hall}" %>
+    <%= f.label "住所" %>
+    <%= f.text_field :address,value:"#{@home.address}" %>
+    <%= f.label "開始時間" %>
+    <%= f.datetime_select :published_at %>
+    <%= f.submit "更新" %>
+<% end %>
+</div>

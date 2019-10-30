@@ -1,0 +1,35 @@
+<img id="image" src="/pool-hall.jpg" style="opacity: 0.9">
+<div class="top_contain">
+    <h1>Let's play Billiard!</h1>
+    <p>ビリヤードを嗜むあなたのために。</p>
+</div>
+<div class="session_top">
+    <%= form_for(:user,url:"/check",method: :post) do |f| %>
+        <%= f.label :email,{class:"top_flabel"}%>
+        <%= f.text_field :email %>
+        <%= f.label :password,{class:"top_flabel"} %>
+        <%= f.password_field :password %>
+        <%= f.submit "ログイン" %>
+    <% end %>
+    <h1><%= link_to("お試しログイン","/test_login") %></h1>
+</div>
+<div class="search_link">
+    <a href="#sec1" style="color:black">ビリヤード場を検索する</a>
+</div>
+<div class="search_top" id="sec1">
+    <div class="search_prefecture" style="font-size:30px">
+        <% @homes.each do |home| %>
+        <ul style="list-style:none"><li><%= link_to(home.prefecture,"/search/#{home.user_id}",{style:"color:black"}) %></li></ul>
+        <% end %>
+    </div>
+    <div class="search">
+        <%= form_for(:search, url:"/home/search_result", method: :get) do |f| %>
+            <%= f.label "ビリヤード場を検索する" %>
+            <%= f.text_field :search %>
+            <%= f.submit "検索", :name=>nil %>
+        <% end %>
+    </div>
+</div>
+<div class="footer">
+<p>@copyright.2019.Billiard player's community</p>
+</div>

@@ -1,0 +1,16 @@
+<img src="/pool-hall.jpg">
+<div class="session-contain">
+<%= form_for(:user,url:"/create",method: :post) do |f| %>
+    <ul style="list-style:none">
+    <li><%= f.label :name,{class:"top_flabel"} %>
+    <%= f.text_field :name %></li>
+    <li><%= f.label :email,{class:"top_flabel"} %>
+    <%= f.text_field :email %></li>
+    <li><%= f.label :password,{class:"top_flabel"} %>
+    <%= f.password_field :password %></li>
+    <li><%= f.label :level,{class:"top_flabel"} %>
+    <%= f.select :level,["A","B","C"] %></li>
+    <li><%= f.submit "登録",{class:"usernew_submit"} %></li>
+    </ul>
+<% end %>
+</div>

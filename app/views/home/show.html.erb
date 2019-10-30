@@ -1,0 +1,17 @@
+<img src="/pool-hall.jpg">
+ <div class="search_contain">
+ <% @homes.pluck(:prefecture).uniq.each do |homes| %>
+    <div class="prefecture" style="font-size:50px"><%= homes %></div>
+ <% end %>
+    <div id="kenn_list">
+    <% @homes.each do |home| %>
+        <ul style="list-style:none">
+            <li><%= home.pool_hall %></br>
+        <%= home.address %></li>
+        </ul>
+    <% end %>
+    </div>
+ </div>
+ <% if session[:id] == 5 %>
+    <%= link_to("店舗の編集をする","/home/show/all_edit") %>
+<% end %>

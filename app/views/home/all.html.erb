@@ -1,0 +1,6 @@
+<img src="/pool-hall.jpg">
+    <div class="index-contain">
+    <% @home.each do |home| %>
+        <%= link_to(home.pool_hall,"/home/#{home.user_id}/edit") %>
+    <% end %>
+    </div>

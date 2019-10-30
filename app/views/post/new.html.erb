@@ -1,0 +1,10 @@
+<img src="/pool-hall.jpg">
+<div class="profile">
+<h1>~投稿画面~</h1>
+<%= form_for(:post,url:"/post/create",method: :post) do |f| %>
+    <div class=profile_content>
+    <%= f.text_area :content, size: "39x7", style:"resize:none" %>
+    <%= f.submit "投稿" %>
+    </div>
+<% end %>
+</div>
